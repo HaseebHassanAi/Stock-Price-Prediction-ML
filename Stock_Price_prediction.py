@@ -24,7 +24,7 @@ warnings.filterwarnings('ignore')
 # -----------------------------
 # Load dataset
 # -----------------------------
-df = pd.read_csv('/content/drive/MyDrive/A.csv')
+df = pd.read_csv('/content/drive/MyDrive/Stock_Price_dataset.csv')
 
 # Basic inspection of the data
 print(df.head())
@@ -142,4 +142,5 @@ print(last_day_features)
 print("\nNext Day Close Predictions:")
 for name, mdl in models.items():
     next_close = mdl.predict(last_day_scaled)
+
     print(f"{name}: {next_close[0]:.2f}")
